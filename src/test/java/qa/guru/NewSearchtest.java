@@ -28,7 +28,7 @@ public class NewSearchtest {
        // Убедиться, что в списке страниц (Pages) есть страница SoftAssertions
         $("[data-filterable-for=wiki-pages-filter]").shouldHave(text("SoftAssertions"));
         //Откройте страницу SoftAssertions
-        open("https://github.com/selenide/selenide/wiki/SoftAssertions");;
+        $(byText("SoftAssertions")).click();
         //проверьте что внутри есть пример кода для JUnit5
         $(byText("Using JUnit5 extend test class:")).shouldBe(visible);
     }
