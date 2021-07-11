@@ -21,7 +21,7 @@ public class NewSearchtest {
     void positiveFillTest() {
         //Открыть страницу Selenide в Github
         open("https://github.com/selenide/selenide");;
-        $(byText("Wiki")).parent().click();
+        $(byText("Wiki")).click();
         //Переход в раздел Wiki проекта
        $(byId("wiki-pages-filter")).setValue("SoftAssertions").pressEnter();
        // Убедиться, что в списке страниц (Pages) есть страница SoftAssertions
