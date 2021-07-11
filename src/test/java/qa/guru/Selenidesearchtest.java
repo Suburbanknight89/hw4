@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.visible;
 
 
-public class NewSearchtest {
+public class Selenidesearchtest {
 
     @BeforeAll
     static void setup() {
@@ -18,7 +18,7 @@ public class NewSearchtest {
     }
 
     @Test
-    void positiveFillTest() {
+    void FinAndAssertTest () {
         //Открыть страницу Selenide в Github
         open("https://github.com/selenide/selenide");;
         $(byText("Wiki")).click();
