@@ -5,8 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byId;
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.visible;
 
@@ -30,6 +29,9 @@ public class NewSearchtest {
         //Откройте страницу SoftAssertions
         $(byText("SoftAssertions")).click();
         //проверьте что внутри есть пример кода для JUnit5
-        $(byText("Using JUnit5 extend test class:")).shouldBe(visible);
+        $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:"));
+        $("#wiki-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
+
+
     }
 }
