@@ -23,7 +23,7 @@ public class SelenideSearchTest {
         open("https://github.com/selenide/selenide");;
         $(byText("Wiki")).click();
         //Переход в раздел Wiki проекта
-       $("wiki-pages-filter").setValue("SoftAssertions").pressEnter();
+       $("#wiki-pages-filter").setValue("SoftAssertions").pressEnter();
        // Убедиться, что в списке страниц (Pages) есть страница SoftAssertions
         $("[data-filterable-for=wiki-pages-filter]").shouldHave(text("SoftAssertions"));
         //Откройте страницу SoftAssertions
