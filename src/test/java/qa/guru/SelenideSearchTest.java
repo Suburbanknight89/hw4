@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.visible;
 
 
-public class Selenidesearchtest {
+public class SelenideSearchTest {
 
     @BeforeAll
     static void setup() {
@@ -18,12 +18,12 @@ public class Selenidesearchtest {
     }
 
     @Test
-    void FinAndAssertTest () {
+    void findAndAsssertTest () {
         //Открыть страницу Selenide в Github
         open("https://github.com/selenide/selenide");;
         $(byText("Wiki")).click();
         //Переход в раздел Wiki проекта
-       $(byId("wiki-pages-filter")).setValue("SoftAssertions").pressEnter();
+       $("wiki-pages-filter").setValue("SoftAssertions").pressEnter();
        // Убедиться, что в списке страниц (Pages) есть страница SoftAssertions
         $("[data-filterable-for=wiki-pages-filter]").shouldHave(text("SoftAssertions"));
         //Откройте страницу SoftAssertions
